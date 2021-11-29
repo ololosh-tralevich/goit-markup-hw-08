@@ -773,18 +773,18 @@ h3 {
   width: 370px;
 }
 
-.button-list {
+.button-block__list {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   margin-bottom: 50px;
 }
 
-.button-list__item {
+.list-item {
   margin-right: 8px;
 }
 
-.button {
+.list-item__button {
   padding: 6px 22px;
   border-width: 0px;
   background-color: var(--milk-color);
@@ -798,7 +798,7 @@ h3 {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.button:hover, .button:focus {
+.list-item__button:hover, .list-item__button:focus {
   cursor: pointer;
   background-color: var(--hover-color);
   color: var(--white-color);
@@ -816,23 +816,31 @@ h3 {
       flex-wrap: wrap;
 }
 
-.projects {
+.projects__proj-list {
   width: 370px;
   margin-right: 30px;
   background: var(--white-color);
   margin-bottom: 30px;
+  -webkit-transition: -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.projects__link:hover, .projects__link:focus {
+.projects__proj-list:hover, .projects__proj-list:focus {
   -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
           box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
-.projects:nth-child(3n + 3) {
+.proj-list__proj-link {
+  text-decoration: none;
+}
+
+.projects__proj-list:nth-child(3n + 3) {
   margin-right: 0;
 }
 
-.projects:nth-last-child(-n + 3) {
+.projects__proj-list:nth-last-child(-n + 3) {
   margin-bottom: 0;
 }
 
@@ -859,12 +867,12 @@ h3 {
   color: var(--grey-color);
 }
 
-.projects__hover-block {
+.proj-link__proj-hover-block {
   position: relative;
   overflow: hidden;
 }
 
-.projects__hover-text {
+.proj-hover-block__proj-hover-text {
   background-color: var(--projects-hover-text);
   color: var(--white-color);
   font-size: 18px;
@@ -885,7 +893,7 @@ h3 {
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.projects__link:hover .projects__hover-text {
+.proj-list__proj-link:hover .proj-hover-block__proj-hover-text {
   -webkit-transform: translate(-50%, 0);
           transform: translate(-50%, 0);
 }
