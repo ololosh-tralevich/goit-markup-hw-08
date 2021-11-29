@@ -1,7 +1,7 @@
 @import "./utils/variables";
-@import "./utils/modern-normalize";
+@import "./base/modern-normalize";
 @import "./utils/mixins";
-@import "./utils/global";
+@import "./base/global";
 
 @import "./components/header";
 @import "./components/index";

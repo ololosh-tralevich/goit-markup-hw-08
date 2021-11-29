@@ -4,9 +4,9 @@
     "sources": [
         "../sass/main.scss",
         "../sass/utils/_variables.scss",
-        "../sass/utils/_modern-normalize.scss",
+        "../sass/base/_modern-normalize.scss",
         "../sass/utils/_mixins.scss",
-        "../sass/utils/_global.scss",
+        "../sass/base/_global.scss",
         "../sass/components/_header.scss",
         "../sass/components/_index.scss",
         "../sass/components/_about-us.scss",
