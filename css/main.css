@@ -313,9 +313,21 @@ h3 {
 }
 
 .container {
-  width: 1200px;
+  max-width: 480px;
   margin: 0 auto;
   padding: 0 15px;
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1200px;
+  }
 }
 
 .flex-container {
@@ -368,7 +380,6 @@ h3 {
   clip: rect(0 0 0 0);
 }
 
-.about-us-li:last-child,
 .what-we-do-img:last-child,
 .team-member-block:last-child,
 .button-li:last-child,
@@ -530,43 +541,6 @@ h3 {
   background-color: var(--order-btn-backgrn-clr);
 }
 
-.what-we-do-sect {
-  padding-top: 0;
-}
-
-.what-we-do {
-  font-weight: bold;
-  font-size: 36px;
-  line-height: 1.16;
-  text-align: center;
-  letter-spacing: 0.03em;
-  color: var(--black-color);
-  margin-top: 0;
-  margin-bottom: 50px;
-}
-
-.what-we-do-img {
-  margin-right: 30px;
-  position: relative;
-}
-
-.what-we-do-img > .what-we-do-soaring {
-  font-weight: bold;
-  font-size: 14px;
-  line-height: 1.14;
-  text-align: center;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  color: var(--white-color);
-  background-color: var(--backgrd-what-we-do-soaring);
-  display: block;
-  position: absolute;
-  bottom: 0;
-  margin: 0;
-  padding: 27px 0;
-  width: 370px;
-}
-
 /* our team section */
 .our-team {
   background-color: var(--milk-color);
@@ -696,6 +670,107 @@ h3 {
   fill: var(--hover-color);
   border-color: var(--hover-color);
   cursor: pointer;
+}
+
+/* about us section */
+@media (min-width: 768px) {
+  .about-us-block {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-right: -30px;
+    margin-bottom: -30px;
+  }
+}
+
+.about-us-li {
+  font-size: 14px;
+  letter-spacing: 0.03em;
+  margin-bottom: 30px;
+}
+
+@media (min-width: 768px) {
+  .about-us-li {
+    margin-right: 30px;
+    width: 354px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .about-us-li {
+    width: 270px;
+  }
+}
+
+.about-us-logo-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: var(--milk-color);
+  border-radius: 4px;
+  margin-bottom: 30px;
+  padding: 25px 0;
+}
+
+.about-us-caption {
+  margin: 0;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--black-color);
+  margin-bottom: 10px;
+}
+
+.about-us-description {
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--grey-color);
+  margin: 0;
+}
+
+.what-we-do-sect {
+  padding-top: 0;
+}
+
+.what-we-do {
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 1.16;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--black-color);
+  margin-top: 0;
+  margin-bottom: 50px;
+}
+
+.what-we-do-img {
+  margin-right: 30px;
+  position: relative;
+}
+
+.what-we-do-img > .what-we-do-soaring {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--white-color);
+  background-color: var(--backgrd-what-we-do-soaring);
+  display: block;
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  padding: 27px 0;
+  width: 370px;
 }
 
 .button-list {
@@ -1040,49 +1115,6 @@ h3 {
 
 .modal-submit-btn:hover, .modal-submit-btn:focus {
   background-color: var(--order-btn-backgrn-clr);
-}
-
-/* about us section */
-.about-us-li {
-  width: 270px;
-  margin-right: 30px;
-  font-size: 14px;
-  letter-spacing: 0.03em;
-}
-
-.about-us-logo-block {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 270px;
-  height: 120px;
-  background-color: var(--milk-color);
-  border-radius: 4px;
-  margin-bottom: 30px;
-}
-
-.about-us-caption {
-  margin: 0;
-  font-weight: bold;
-  font-size: 14px;
-  line-height: 1.14;
-  text-transform: uppercase;
-  color: var(--black-color);
-}
-
-.about-us-description {
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
-  color: var(--grey-color);
-  margin-top: 10px;
-  margin-bottom: 0;
 }
 
 .footer {
