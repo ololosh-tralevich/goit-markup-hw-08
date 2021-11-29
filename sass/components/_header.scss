@@ -1,0 +1,89 @@
+.header {
+    border-bottom: 1px solid var(--border-color);
+  }
+  
+  .header-flex-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo {
+    font-family: var(--secondary-font), sans-serif;
+    font-weight: bold;
+    font-size: 26px;
+    letter-spacing: 0.03em;
+    margin-right: 92px;
+    color: var(--hover-color);
+  }
+  
+  .a-tag-header {
+    padding: 32px 0;
+    display: block;
+  }
+     
+  .logo-black {
+    color: var(--black-color);
+  }
+
+  
+  .studio,
+  .portfolio,
+  .contact {
+    margin-right: 50px;
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 0.02em;
+    color: var(--black-color);
+    position: relative;
+  }
+  
+  .current-page {
+    color: var(--hover-color);
+  }
+  
+  .current-page::after {
+    display: block;
+    width: 100%;
+    content: "";
+    border-bottom: 4px solid var(--hover-color);
+    border-radius: 2px;
+    position: absolute;
+    top: 77px;
+    left: 0;
+  }
+  
+  .contacts {
+    display: flex;
+    margin-left: auto;
+  }
+  
+  .a-tag-header {
+    display: flex;
+    align-items: center;
+  }
+  
+  .header-tel,
+  .header-email {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+  }
+  
+  .header-email {
+    margin-right: 50px;
+  }
+  
+  .envelope,
+  .smartphone,
+  .tel,
+  .email {
+    color: var(--grey-color);
+    fill: var(--grey-color);
+  }
+  
+  .envelope,
+  .smartphone {
+    margin-right: 10px;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
