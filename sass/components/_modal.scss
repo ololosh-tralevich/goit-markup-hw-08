@@ -106,7 +106,8 @@
     } 
   }
   
-  .modal-field:hover + .modal-svg {
+  .modal-field:hover + .modal-svg,
+  .modal-field:focus + .modal-svg {
       fill: var(--hover-color);
   }
 
