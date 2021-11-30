@@ -2,30 +2,56 @@
     margin: 0 auto;
     padding: 200px 0;
     max-width: 1600px;
+    max-height: 400px;
     text-align: center;
     background-image: linear-gradient(
         to right,
         rgba(47, 48, 58, 0.4),
         rgba(47, 48, 58, 0.4)
       ),
-      url(../images/main/main-background.jpg);
+      url(../images/main/main-background-mob.jpg);
   
     background-color: var(--order-block-color);
     background-position: center;
     background-repeat: no-repeat;
-    // @include; 
+    display: flex;
+    align-items: center;
+
+    @include mq(tablet) {
+      background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../images/main/main-background-tablet.jpg);
+    }
+
+    @include mq(desktop) {
+      background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../images/main/main-background.jpg);
+      max-height: 600px;
+    }
   }
   
   .h1-tag {
     margin: 0 auto;
-    max-width: 696px;
+    max-width: 360px;
     font-weight: 900;
-    font-size: 44px;
-    line-height: 1.36;
+    font-size: 26px;
+    line-height: 1.61;
     letter-spacing: 0.06em;
     text-transform: uppercase;
     text-align: center;
     color: var(--white-color);
+    @include mq(desktop) {
+      font-size: 44px;
+      line-height: 1.36;
+      max-width: 696px;
+    }
   }
   
   .order-button {

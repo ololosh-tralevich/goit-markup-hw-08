@@ -1,5 +1,10 @@
 .what-we-do-sect {
     padding-top: 0;
+    display: none;
+
+    @include mq(desktop) {
+      display: block;
+    }
   }
   
   .what-we-do {
