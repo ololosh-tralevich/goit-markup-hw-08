@@ -100,9 +100,7 @@ h3 {
   .icon-list:last-child,
   .our-client:last-child,
   .footer-icon:last-child {
-    @include mq(tablet) {
     margin-right: 0;
-  }
 }
   .current-btn {
     background-color: var(--hover-color);

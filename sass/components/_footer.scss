@@ -5,22 +5,45 @@
   
   .footer-flex {
     display: flex;
-    align-items: baseline;
+    flex-direction: column;
+    align-items: center;
+
+    @include mq(tablet) {
+      align-items: baseline;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+    @include mq(desktop) {
+      align-items: baseline;
+      flex-wrap: nowrap;
+    }
   }
   
   .footer-flex-wrap {
+    @include mq(tablet) {
+      margin-left: 76px;
+    }
+    @include mq(desktop) {
     display: flex;
     flex-direction: column;
+    margin-left: 0;
   }
-  
+}
   .footer-logo {
     font-family: "Raleway", sans-serif;
     font-weight: bold;
-    font-size: 26px;
-    line-height: 1.19;
+    text-align: center;
+    font-size: 24px;
+    line-height: 1.16;
     margin-bottom: 20px;
     letter-spacing: 0.03em;
     color: var(--hover-color);
+    
+    @include mq(desktop) {
+      font-size: 26px;
+      line-height: 1.19;
+      text-align: left;
+    }
   }
    
   .logo-white {
@@ -30,12 +53,19 @@
   .address {
     font-style: normal;
     font-weight: normal;
+    text-align: center;
     font-size: 14px;
     line-height: 1.17;
     letter-spacing: 0.03em;
     color: var(--white-color);
     display: flex;
     flex-direction: column;
+    margin-bottom: 60px;
+
+    @include mq(desktop) {
+      width: 230px;
+      text-align: left;
+    }
   }
   
   .map {
@@ -48,16 +78,27 @@
     font-size: 14px;
     line-height: 1.17;
     letter-spacing: 0.03em;
-    margin-bottom: 8px;
     color: var(--footer-contacts-color);
+  }
+
+  .footer-email {
+    margin-bottom: 8px;
   }
   
   /* footer .svg */
   .footer-links {
-    margin-left: 70px;
+    margin-bottom: 60px;
+
+    @include mq(tablet) {
+      margin-left: 165px;
+    }
+    @include mq(desktop) {
+      margin-left: 70px;
+    }
+
   }
   
-  .footer-links-block {
+  .footer-links-list {
     display: flex;
   }
   
@@ -68,6 +109,13 @@
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: var(--white-color);
+    text-align: center;
+    margin: 0;
+    margin-bottom: 20px;
+
+    @include mq(desktop) {
+      text-align: left;
+    }
   }
   .footer-icon {
     margin-right: 10px;
@@ -90,7 +138,10 @@
   }
 
   .footer-spam-block {
-    margin-left: 93px;
+    width: 100%;
+    @include mq(desktop) {
+      margin-left: 93px;
+    }
   }
   
   .footer-spam-invite {
@@ -100,16 +151,29 @@
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: white;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 20px;
+
+    @include mq(desktop) {
+      text-align: left;
+    }
   }
   
   .spam-form-footer {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+
+    @include mq(desktop) {
+      flex-direction: row;
+    }
   }
   
   .spam-field {
-    width: 358px;
+    width: 100%;
+    max-width: 358px;
     height: 50px;
     background-color: var(--footer-color);
     border: 1px solid rgba(255, 255, 255, 0.3);
@@ -117,6 +181,11 @@
     border-radius: 4px;
     padding: 15px 16px;
     color: var(--white-color);
+    margin-bottom: 20px;
+
+    @include mq(desktop) {
+      margin-bottom: 0;
+    }
   }
   
   .submit-button-footer {
@@ -129,7 +198,6 @@
     border: 0px;
     border-radius: 4px;
     padding-left: 30px;
-    margin-left: 12px;
     cursor: pointer;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     font-weight: bold;
@@ -138,6 +206,10 @@
     letter-spacing: 0.06em;
     &:hover, &:focus {
       background-color: var(--order-btn-backgrn-clr);
+    }
+
+    @include mq(desktop) {
+      margin-left: 12px;
     }
   }
   

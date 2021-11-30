@@ -389,16 +389,14 @@ h3 {
   clip: rect(0 0 0 0);
 }
 
-@media (min-width: 768px) {
-  .what-we-do-img:last-child,
-  .team-member-block:last-child,
-  .button-li:last-child,
-  .contact,
-  .icon-list:last-child,
-  .our-client:last-child,
-  .footer-icon:last-child {
-    margin-right: 0;
-  }
+.what-we-do-img:last-child,
+.team-member-block:last-child,
+.button-li:last-child,
+.contact,
+.icon-list:last-child,
+.our-client:last-child,
+.footer-icon:last-child {
+  margin-right: 0;
 }
 
 .current-btn {
@@ -1215,29 +1213,75 @@ h3 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
-}
-
-.footer-flex-wrap {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (min-width: 768px) {
+  .footer-flex {
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+@media (min-width: 1280px) {
+  .footer-flex {
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+}
+
+@media (min-width: 768px) {
+  .footer-flex-wrap {
+    margin-left: 76px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .footer-flex-wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-left: 0;
+  }
 }
 
 .footer-logo {
   font-family: "Raleway", sans-serif;
   font-weight: bold;
-  font-size: 26px;
-  line-height: 1.19;
+  text-align: center;
+  font-size: 24px;
+  line-height: 1.16;
   margin-bottom: 20px;
   letter-spacing: 0.03em;
   color: var(--hover-color);
+}
+
+@media (min-width: 1280px) {
+  .footer-logo {
+    font-size: 26px;
+    line-height: 1.19;
+    text-align: left;
+  }
 }
 
 .logo-white {
@@ -1247,6 +1291,7 @@ h3 {
 .address {
   font-style: normal;
   font-weight: normal;
+  text-align: center;
   font-size: 14px;
   line-height: 1.17;
   letter-spacing: 0.03em;
@@ -1258,6 +1303,14 @@ h3 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  margin-bottom: 60px;
+}
+
+@media (min-width: 1280px) {
+  .address {
+    width: 230px;
+    text-align: left;
+  }
 }
 
 .map {
@@ -1270,16 +1323,31 @@ h3 {
   font-size: 14px;
   line-height: 1.17;
   letter-spacing: 0.03em;
-  margin-bottom: 8px;
   color: var(--footer-contacts-color);
+}
+
+.footer-email {
+  margin-bottom: 8px;
 }
 
 /* footer .svg */
 .footer-links {
-  margin-left: 70px;
+  margin-bottom: 60px;
 }
 
-.footer-links-block {
+@media (min-width: 768px) {
+  .footer-links {
+    margin-left: 165px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .footer-links {
+    margin-left: 70px;
+  }
+}
+
+.footer-links-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1292,6 +1360,15 @@ h3 {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--white-color);
+  text-align: center;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+@media (min-width: 1280px) {
+  .invite-footer {
+    text-align: left;
+  }
 }
 
 .footer-icon {
@@ -1323,7 +1400,13 @@ h3 {
 }
 
 .footer-spam-block {
-  margin-left: 93px;
+  width: 100%;
+}
+
+@media (min-width: 1280px) {
+  .footer-spam-block {
+    margin-left: 93px;
+  }
 }
 
 .footer-spam-invite {
@@ -1333,12 +1416,25 @@ h3 {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: white;
+  text-align: center;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+@media (min-width: 1280px) {
+  .footer-spam-invite {
+    text-align: left;
+  }
 }
 
 .spam-form-footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1347,8 +1443,18 @@ h3 {
           justify-content: center;
 }
 
+@media (min-width: 1280px) {
+  .spam-form-footer {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
 .spam-field {
-  width: 358px;
+  width: 100%;
+  max-width: 358px;
   height: 50px;
   background-color: var(--footer-color);
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -1357,6 +1463,13 @@ h3 {
   border-radius: 4px;
   padding: 15px 16px;
   color: var(--white-color);
+  margin-bottom: 20px;
+}
+
+@media (min-width: 1280px) {
+  .spam-field {
+    margin-bottom: 0;
+  }
 }
 
 .submit-button-footer {
@@ -1374,7 +1487,6 @@ h3 {
   border: 0px;
   border-radius: 4px;
   padding-left: 30px;
-  margin-left: 12px;
   cursor: pointer;
   -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -1386,6 +1498,12 @@ h3 {
 
 .submit-button-footer:hover, .submit-button-footer:focus {
   background-color: var(--order-btn-backgrn-clr);
+}
+
+@media (min-width: 1280px) {
+  .submit-button-footer {
+    margin-left: 12px;
+  }
 }
 
 .icon-send {
