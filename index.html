@@ -14,13 +14,13 @@
 </head>
 
 <body>
-  <!-- <header class="header">
+  <header class="header header-flex-container">
     <div class="container header-flex-container">
       <a class="logo a-tag" href="./index.html">
         Web<span class="logo-black">Studio</span>
       </a>
 
-      <nav>
+      <!-- <nav class="display-none">
         <ul class="menu flex-container">
           <li class="studio">
             <a class="a-tag-header current-page" href="./index.html">Студия</a>
@@ -32,9 +32,9 @@
             <a class="a-tag-header" href="/contact">Контакты</a>
           </li>
         </ul>
-      </nav>
-
-      <ul class="contacts">
+      </nav> -->
+<!-- 
+      <ul class="contacts display-none">
         <li class="header-email">
           <a class="a-tag-header email" href="mailto:info@devstudio.com">
             <svg class="envelope" width="16px" height="12px">
@@ -52,12 +52,63 @@
             +38 096 111 11 11
           </a>
         </li>
+      </ul> -->
+    </div>
+
+    <!-- open menu button -->
+    <button class="menu-button" type="button" data-menu-button>
+      <svg class="menu-svg" width="40px" height="40px">
+        <use class="open-menu-btn" href="./images/sprite/icons.svg#open-menu"></use>
+        <use class="close-menu-btn" href="./images/sprite/icons.svg#close-button"></use>
+      </svg>
+    </button>
+
+    <!-- header menu -->
+    <div class="header-menu" data-menu>
+      <nav>
+        <ul class="menu-pages-list">
+          <li class="menu-page">
+            <a class="a-tag" href="./index.html">Студия</a>
+          </li>
+          <li class="menu-page">
+            <a class="a-tag" href="./portfolio.html">Портфолио</a>
+          </li>
+          <li class="menu-page">
+            <a class="a-tag" href="/contact">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="menu-lists">
+      <ul class="menu-contacts">
+        <li class="menu-phone">
+           <a class="a-tag menu-phone-link" href="tel:+380961111111">+38 096 111 11 11</a> 
+        </li>
+        <li class="menu-email">
+          <a class="a-tag menu-email-link" href="mailto:info@devstudio.com">info@devstudio.com</a>
+        </li>
+      </ul>
+
+     <ul class="menu-soc-links-list">
+        <li class="soc-link-item">
+          <a class="a-tag soc-link" href="https://www.instagram.com/tipanazar/">Instagram</a>
+        </li>
+        <li class="soc-link-item">
+          <a class="a-tag soc-link" href="#">Twitter</a>
+        </li>
+        <li class="soc-link-item">
+          <a class="a-tag soc-link" href="#">Facebook</a>
+        </li>
+        <li class="soc-link-item">
+          <a class="a-tag soc-link" href="#">LinkedIn</a>
+        </li>
       </ul>
     </div>
-  </header> -->
+  </div>
+  </header>
 
   <main>
-    <section class="order-block">
+    <!-- <section class="order-block">
       <div class="container">
         <h1 class="h1-tag">Эффективные решения для вашего бизнеса</h1>
         <button class="order-button" type="button" name="Заказать услугу" data-modal-open>
@@ -123,7 +174,7 @@
           </form>
         </div>
       </div>
-    </section>
+    </section> -->
 
      <!-- <section class="section about-us-section">
       <div class="container">
@@ -487,6 +538,7 @@
     </div>
   </footer>  -->
   <script src="./js/modal.js"></script>
+  <script src="/js/mobile-menu.js"></script>
 </body>
 
 </html>
