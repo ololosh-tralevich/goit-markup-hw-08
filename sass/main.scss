@@ -2,11 +2,12 @@
 @import "./base/modern-normalize";
 @import "./utils/mixins";
 @import "./base/global";
-
 @import "./components/header";
-@import "./components/index";
+@import "./components/order-block";
 @import "./components/about-us";
 @import "./components/what-we-do";
-@import "./components/portfolio";
+@import "./components/our-team";
+@import "./components/our-clients";
 @import "./components/modal";
+@import "./components/portfolio";
 @import "./components/footer";
