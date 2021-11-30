@@ -43,8 +43,13 @@ h3 {
 }
 
 .section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  
+  @include mq(desktop) {
   padding-top: 94px;
   padding-bottom: 94px;
+}
 }
 
 .a-tag,
@@ -61,6 +66,8 @@ h3 {
 
 .img-tag {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 .a-tag-header:hover .envelope,
@@ -93,9 +100,10 @@ h3 {
   .icon-list:last-child,
   .our-client:last-child,
   .footer-icon:last-child {
+    @include mq(tablet) {
     margin-right: 0;
   }
-
+}
   .current-btn {
     background-color: var(--hover-color);
     color: var(--white-color);

@@ -337,8 +337,15 @@ h3 {
 }
 
 .section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+@media (min-width: 1280px) {
+  .section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .a-tag,
@@ -355,6 +362,8 @@ h3 {
 
 .img-tag {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 .a-tag-header:hover .envelope,
@@ -380,14 +389,16 @@ h3 {
   clip: rect(0 0 0 0);
 }
 
-.what-we-do-img:last-child,
-.team-member-block:last-child,
-.button-li:last-child,
-.contact,
-.icon-list:last-child,
-.our-client:last-child,
-.footer-icon:last-child {
-  margin-right: 0;
+@media (min-width: 768px) {
+  .what-we-do-img:last-child,
+  .team-member-block:last-child,
+  .button-li:last-child,
+  .contact,
+  .icon-list:last-child,
+  .our-client:last-child,
+  .footer-icon:last-child {
+    margin-right: 0;
+  }
 }
 
 .current-btn {
@@ -648,27 +659,60 @@ h3 {
 
 .our-team-caption {
   margin-top: 0;
-  margin-bottom: 50px;
-  font-weight: bold;
-  font-size: 36px;
-  line-height: 1.16;
+  margin-bottom: 30px;
   text-align: center;
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 1.17;
   letter-spacing: 0.03em;
 }
 
-.our-team ul {
+@media (min-width: 1280px) {
+  .our-team-caption {
+    margin-bottom: 50px;
+    font-size: 36px;
+    line-height: 1.16;
+  }
+}
+
+@media (min-width: 768px) {
+  .our-team-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-right: -30px;
+    margin-bottom: -30px;
+  }
+}
+
+.icon-flex {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
 .team-member-block {
-  margin-right: 30px;
-  width: 270px;
+  margin: 0 auto 30px auto;
   background-color: var(--white-color);
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
+}
+
+@media (min-width: 768px) {
+  .team-member-block {
+    width: 354px;
+    margin: 0 30px 30px 0;
+  }
+}
+
+@media (min-width: 1280px) {
+  .team-member-block {
+    width: 270px;
+    margin-right: 30px;
+  }
 }
 
 .team-member {
