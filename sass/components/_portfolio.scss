@@ -1,10 +1,24 @@
 .button-block__list {
-  justify-content: center;
-  margin-bottom: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+
+  @include mq(tablet) {
+    margin-bottom: 30px;
+  }
+  @include mq(desktop) {
+    margin-bottom: 50px;
+  }
 }
 
 .list-item {
   margin-right: 8px;
+
+  @include mq(mobile-only) {
+    &:nth-child(-n + 3) {
+      margin-bottom: 15px;
+    }
+  }
 }
 
 .list-item__button {
@@ -16,10 +30,11 @@
   font-size: 16px;
   line-height: 1.62;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-  box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1),
-  background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  
-    &:hover, &:focus {
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
     cursor: pointer;
     background-color: var(--hover-color);
     color: var(--white-color);
@@ -33,34 +48,38 @@
   color: var(--white-color);
 }
 
-
 .flex-container-wrap {
-flex-wrap: wrap;
-
+  flex-wrap: wrap;
 }
 
 .projects__proj-list {
-  width: 370px;
+  width: 450px;
   margin-right: 30px;
   background: var(--white-color);
   margin-bottom: 30px;
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
       1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
+
+  @include mq(tablet-only) {
+    width: 354px;
+  }
+  @include mq(desktop) {
+    &:nth-child(3n + 3) {
+      margin-right: 0;
+    }
+    &:nth-last-child(-n + 3) {
+      margin-bottom: 0;
+    }
+    width: 340px;
   }
 }
 
 .proj-list__proj-link {
-  text-decoration: none ;
-
-}
-
-.projects__proj-list:nth-child(3n + 3) {
-  margin-right: 0;
-}
-.projects__proj-list:nth-last-child(-n + 3) {
-  margin-bottom: 0;
+  text-decoration: none;
 }
 
 .projects__text-block {
@@ -106,7 +125,6 @@ flex-wrap: wrap;
   left: 50%;
   transform: translate(-50%, 101%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
 }
 
 .proj-list__proj-link:hover .proj-hover-block__proj-hover-text {

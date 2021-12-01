@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="./css/modern-normalize.css" />
   <link rel="stylesheet" href="./css/main.min.css" />
 </head>
-<header class="header">
+<!-- <header class="header">
   <div class="container header-flex-container">
     <a class="logo a-tag" href="./index.html">
       Web<span class="logo-black">Studio</span>
@@ -60,7 +60,7 @@
     </svg>
   </button>
 
-  <!-- header menu -->
+  <!-- header menu
   <div class="header-menu" data-menu>
     <nav>
       <ul class="menu-pages-list">
@@ -102,14 +102,14 @@
     </ul>
   </div>
 </div>
-</header>
+</header> -->
 
 <!-- main content section -->
 <main>
   <section class="menu section">
     <div class="menu__button-block container">
       <h2 hidden>Портфолио</h2>
-      <ul class="button-block__list flex-container">
+      <!-- <ul class="button-block__list">
         <li class="list-item">
           <button class="list-item__button button current-btn" type="button">Все</button>
         </li>
@@ -131,13 +131,34 @@
             Маркетинг
           </button>
         </li>
-      </ul>
+      </ul> -->
       <!-- img list -->
       <ul class="projects flex-container-wrap flex-container">
         <li class="projects__proj-list">
           <a class="proj-list__proj-link" href="#">
             <div class="proj-link__proj-hover-block">
-              <img class="img-tag" src="./images/portfolio/portfolio(1).jpg" width="370" alt="Логотип проекта" />
+              <picture>
+                <source 
+                media="(min-width: 768px)"
+                srcset="
+                ./images/portfolio/img_md.jpg 1x,
+                ./images/portfolio/img@2x_md.jpg 2x
+                ">
+
+                <source
+                media="(min-width: 1280px)"
+                srcset="
+                ./images/portfolio/img_lg.jpg 1x,
+                ./images/portfolio/img@2x_lg.jpg 2x
+                ">
+
+                <img srcset="
+                ./images/portfolio/img_sm.jpg 1x,
+                ./images/portfolio/img@2x_sm.jpg 2x
+                "
+                src="./images/portfolio/img_sm.jpg" 
+                alt="Логотип проекта" />
+              </picture>
               <p class="proj-hover-block__proj-hover-text">
                 Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу для
                 цифрового шпионажа и атак на защищённые сервера конкурентов.
@@ -152,7 +173,28 @@
         <li class="projects__proj-list">
           <a class="proj-list__proj-link" href="#">
             <div class="proj-link__proj-hover-block">
-              <img class="img-tag" src="./images/portfolio/portfolio(2).jpg" width="370" alt="Логотип проекта" />
+              <picture>
+                <source 
+                media="(min-width: 768px)"
+                srcset="
+                ./images/portfolio/img-1_md.jpg 1x,
+                ./images/portfolio/img@2x-1_md.jpg 2x
+                ">
+
+                <source
+                media="(min-width: 1280px)"
+                srcset="
+                ./images/portfolio/img-1_lg.jpg 1x,
+                ./images/portfolio/img@2x-1_lg.jpg 2x
+                ">
+                
+                <img srcset="
+                ./images/portfolio/img-1_sm.jpg 1x,
+                ./images/portfolio/img@2x-1_sm.jpg 2x
+                "
+                src="./images/portfolio/img-1_sm.jpg" 
+                alt="Логотип проекта" />
+              </picture>
               <p class="proj-hover-block__proj-hover-text">
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat, libero porro! Animi, totam accusamus.
                 Rerum voluptate corrupti neque nostrum tempora vero alias provident excepturi. Sunt aspernatur veritatis
@@ -169,7 +211,28 @@
         <li class="projects__proj-list">
           <a class="proj-list__proj-link" href="#">
             <div class="proj-link__proj-hover-block">
-              <img class="img-tag" src="./images/portfolio/portfolio(3).jpg" width="370" alt="Логотип проекта" />
+              <picture>
+                <source 
+                media="(min-width: 768px)"
+                srcset="
+                ./images/portfolio/img-2_md.jpg 1x,
+                ./images/portfolio/img@2x-2_md.jpg 2x
+                ">
+
+                <source
+                media="(min-width: 1280px)"
+                srcset="
+                ./images/portfolio/img-2_lg.jpg 1x,
+                ./images/portfolio/img@2x-2_lg.jpg 2x
+                ">
+                
+                <img srcset="
+                ./images/portfolio/img-2_sm.jpg 1x,
+                ./images/portfolio/img@2x-2_sm.jpg 2x
+                "
+                src="./images/portfolio/img-2_sm.jpg" 
+                alt="Логотип проекта" />
+              </picture>
               <p class="proj-hover-block__proj-hover-text">
                 Коронное блюдо - суп с летучей мыши.
               </p>
@@ -183,7 +246,28 @@
         <li class="projects__proj-list">
           <a class="proj-list__proj-link" href="#">
             <div class="proj-link__proj-hover-block">
-              <img class="img-tag" src="./images/portfolio/portfolio(4).jpg" width="370" alt="Логотип проекта" />
+              <picture>
+                <source 
+                media="(min-width: 768px)"
+                srcset="
+                ./images/portfolio/img-3_md.jpg 1x,
+                ./images/portfolio/img@2x-3_md.jpg 2x
+                ">
+
+                <source
+                media="(min-width: 1280px)"
+                srcset="
+                ./images/portfolio/img-3_lg.jpg 1x,
+                ./images/portfolio/img@2x-3_lg.jpg 2x
+                ">
+                
+                <img srcset="
+                ./images/portfolio/img-3_sm.jpg 1x,
+                ./images/portfolio/img@2x-3_sm.jpg 2x
+                "
+                src="./images/portfolio/img-3_sm.jpg" 
+                alt="Логотип проекта" />
+              </picture>
               <p class="proj-hover-block__proj-hover-text">
                 dipisicing elit. Placeat, libero porro! Animi, totam accusamus. Rerum voluptate corrupti neque nostrum
                 tempora vero alias provident excepturi. Sunt aspernatur veritatis minus reiciendis quaerat.
@@ -198,7 +282,28 @@
         <li class="projects__proj-list">
           <a class="proj-list__proj-link" href="#">
             <div class="proj-link__proj-hover-block">
-              <img class="img-tag" src="./images/portfolio/portfolio(5).jpg" width="370" alt="Логотип проекта" />
+              <picture>
+                <source 
+                media="(min-width: 768px)"
+                srcset="
+                ./images/portfolio/img-4_md.jpg 1x,
+                ./images/portfolio/img@2x-4_md.jpg 2x
+                ">
+
+                <source
+                media="(min-width: 1280px)"
+                srcset="
+                ./images/portfolio/img-4_lg.jpg 1x,
+                ./images/portfolio/img@2x-4_lg.jpg 2x
+                ">
+                
+                <img srcset="
+                ./images/portfolio/img-4_sm.jpg 1x,
+                ./images/portfolio/img@2x-4_sm.jpg 2x
+                "
+                src="./images/portfolio/img-4_sm.jpg" 
+                alt="Логотип проекта" />
+              </picture>
               <p class="proj-hover-block__proj-hover-text">
                 Lorem ipsum dolorrupti neque nostrum tempora vero alias provident excepturi. Sunt aspernatur veritatis
                 minus reiciendis quaerat.
@@ -213,7 +318,28 @@
         <li class="projects__proj-list">
           <a class="proj-list__proj-link" href="#">
             <div class="proj-link__proj-hover-block">
-              <img class="img-tag" src="./images/portfolio/portfolio(6).jpg" width="370" alt="Логотип проекта" />
+              <picture>
+                <source 
+                media="(min-width: 768px)"
+                srcset="
+                ./images/portfolio/img-5_md.jpg 1x,
+                ./images/portfolio/img@2x-5_md.jpg 2x
+                ">
+
+                <source
+                media="(min-width: 1280px)"
+                srcset="
+                ./images/portfolio/img-5_lg.jpg 1x,
+                ./images/portfolio/img@2x-5_lg.jpg 2x
+                ">
+                
+                <img srcset="
+                ./images/portfolio/img-5_sm.jpg 1x,
+                ./images/portfolio/img@2x-5_sm.jpg 2x
+                "
+                src="./images/portfolio/img-5_sm.jpg" 
+                alt="Логотип проекта" />
+              </picture>
               <p class="proj-hover-block__proj-hover-text">
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat, libero porro porro porro porro porro
                 porro porro porro porro porro porro porro porro porro! Reiciendis quaerat.
@@ -228,7 +354,28 @@
         <li class="projects__proj-list">
           <a class="proj-list__proj-link" href="#">
             <div class="proj-link__proj-hover-block">
-              <img class="img-tag" src="./images/portfolio/portfolio(7).jpg" width="370" alt="Логотип проекта" />
+              <picture>
+                <source 
+                media="(min-width: 768px)"
+                srcset="
+                ./images/portfolio/img-6_md.jpg 1x,
+                ./images/portfolio/img@2x-6_md.jpg 2x
+                ">
+
+                <source
+                media="(min-width: 1280px)"
+                srcset="
+                ./images/portfolio/img-6_lg.jpg 1x,
+                ./images/portfolio/img@2x-6_lg.jpg 2x
+                ">
+                
+                <img srcset="
+                ./images/portfolio/img-6_sm.jpg 1x,
+                ./images/portfolio/img@2x-6_sm.jpg 2x
+                "
+                src="./images/portfolio/img-6_sm.jpg" 
+                alt="Логотип проекта" />
+              </picture>
               <p class="proj-hover-block__proj-hover-text">
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat, libero porro! Animi, totam rnatur
                 veritatis minus reiciendis quaerat.
@@ -243,7 +390,28 @@
         <li class="projects__proj-list">
           <a class="proj-list__proj-link" href="#">
             <div class="proj-link__proj-hover-block">
-              <img class="img-tag" src="./images/portfolio/portfolio(8).jpg" width="370" alt="Логотип проекта" />
+              <picture>
+                <source 
+                media="(min-width: 768px)"
+                srcset="
+                ./images/portfolio/img-7_md.jpg 1x,
+                ./images/portfolio/img@2x-7_md.jpg 2x
+                ">
+
+                <source
+                media="(min-width: 1280px)"
+                srcset="
+                ./images/portfolio/img-7_lg.jpg 1x,
+                ./images/portfolio/img@2x-7_lg.jpg 2x
+                ">
+                
+                <img srcset="
+                ./images/portfolio/img-7_sm.jpg 1x,
+                ./images/portfolio/img@2x-7_sm.jpg 2x
+                "
+                src="./images/portfolio/img-7_sm.jpg" 
+                alt="Логотип проекта" />
+              </picture>
               <p class="proj-hover-block__proj-hover-text">
                 Lorem ipsum dolor sit amet consectetur, adipis totam accusamus. Rerum voluptate corrupti neque nostrum
                 tempora vero alias provident excepturi. Sunt aspernatur veritatis minus reiciendis quaerat.
@@ -258,7 +426,28 @@
         <li class="proj-list">
           <a class="proj-list__proj-link" href="#">
             <div class="proj-link__proj-hover-block">
-              <img class="img-tag" src="./images/portfolio/portfolio(9).jpg" width="370" alt="Логотип проекта" />
+              <picture>
+                <source 
+                media="(min-width: 768px)"
+                srcset="
+                ./images/portfolio/img-8_md.jpg 1x,
+                ./images/portfolio/img@2x-8_md.jpg 2x
+                ">
+
+                <source
+                media="(min-width: 1280px)"
+                srcset="
+                ./images/portfolio/img-8_lg.jpg 1x,
+                ./images/portfolio/img@2x-8_lg.jpg 2x
+                ">
+                
+                <img srcset="
+                ./images/portfolio/img-8_sm.jpg 1x,
+                ./images/portfolio/img@2x-8_sm.jpg 2x
+                "
+                src="./images/portfolio/img-8_sm.jpg" 
+                alt="Логотип проекта" />
+              </picture>
               <p class="proj-hover-block__proj-hover-text">
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat, libero porro! Animi, totam accusamus.
                 eiciendis quaerat.
@@ -276,7 +465,7 @@
 </main>
 
 <!-- footer content section -->
-<footer class="footer">
+<!-- <footer class="footer">
   <div class="container footer-flex">
     <div class="footer-flex-wrap">
       <a class="footer-logo a-tag" href="./index.html">
@@ -340,7 +529,7 @@
       </form>
     </div>
   </div>
-</footer> 
+</footer> -->
     </div>
   </div>
 </footer>
