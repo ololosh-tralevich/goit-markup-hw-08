@@ -43,7 +43,7 @@
     margin-right: 15px;
     height: 40px;
     width: 40px;
-    
+
     @include mq(tablet) {
       display: none;
     }
@@ -75,6 +75,10 @@
   }
   .menu-page:last-child {
     margin-bottom: 0;
+  }
+
+  .current-page-menu {
+    color: var(--hover-color);
   }
 
   .menu-phone {

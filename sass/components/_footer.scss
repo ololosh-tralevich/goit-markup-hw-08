@@ -64,6 +64,7 @@
 
     @include mq(desktop) {
       width: 230px;
+      margin: 0;
       text-align: left;
     }
   }
@@ -94,6 +95,7 @@
     }
     @include mq(desktop) {
       margin-left: 70px;
+      margin-bottom: 0;
     }
 
   }
