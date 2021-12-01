@@ -13,13 +13,13 @@
   <link rel="stylesheet" href="./css/modern-normalize.css" />
   <link rel="stylesheet" href="./css/main.min.css" />
 </head>
-<!-- <header class="header">
+<header class="header header-flex-container">
   <div class="container header-flex-container">
     <a class="logo a-tag" href="./index.html">
       Web<span class="logo-black">Studio</span>
     </a>
 
-    <nav>
+    <nav class="nav-header">
       <ul class="menu flex-container">
         <li class="studio">
           <a class="a-tag-header" href="./index.html">Студия</a>
@@ -35,7 +35,7 @@
 
     <ul class="contacts">
       <li class="header-email">
-        <a class="a-tag-header email" href="mailto:info@devstudio.com">
+        <a class="header-email-link" href="mailto:info@devstudio.com">
           <svg class="envelope" width="16px" height="12px">
             <use href="./images/sprite/icons.svg#icon-envelope"></use>
           </svg>
@@ -44,7 +44,7 @@
       </li>
 
       <li class="header-tel">
-        <a class="a-tag-header tel" href="tel:+380961111111">
+        <a class="header-tel-link" href="tel:+380961111111">
           <svg class="smartphone" width="10px" height="16px">
             <use href="./images/sprite/icons.svg#icon-smartphone"></use>
           </svg>
@@ -53,6 +53,8 @@
       </li>
     </ul>
   </div>
+
+  <!-- open menu button -->
   <button class="menu-button" type="button" data-menu-button>
     <svg class="menu-svg" width="40px" height="40px">
       <use class="open-menu-btn" href="./images/sprite/icons.svg#open-menu"></use>
@@ -60,7 +62,7 @@
     </svg>
   </button>
 
-  <!-- header menu
+  <!-- header menu -->
   <div class="header-menu" data-menu>
     <nav>
       <ul class="menu-pages-list">
@@ -68,7 +70,7 @@
           <a class="a-tag" href="./index.html">Студия</a>
         </li>
         <li class="menu-page">
-          <a class="a-tag" href="./portfolio.html">Портфолио</a>
+          <a class="a-tag current-page-menu" href="./portfolio.html">Портфолио</a>
         </li>
         <li class="menu-page">
           <a class="a-tag" href="/contact">Контакты</a>
@@ -88,13 +90,13 @@
 
    <ul class="menu-soc-links-list">
       <li class="soc-link-item">
-        <a class="a-tag soc-link" href="https://www.instagram.com/tipanazar/">Instagram</a>
+        <a class="a-tag soc-link soc-link--decor" href="https://www.instagram.com/tipanazar/">Instagram</a>
       </li>
       <li class="soc-link-item">
-        <a class="a-tag soc-link" href="#">Twitter</a>
+        <a class="a-tag soc-link soc-link--decor" href="#">Twitter</a>
       </li>
       <li class="soc-link-item">
-        <a class="a-tag soc-link" href="#">Facebook</a>
+        <a class="a-tag soc-link soc-link--decor" href="#">Facebook</a>
       </li>
       <li class="soc-link-item">
         <a class="a-tag soc-link" href="#">LinkedIn</a>
@@ -102,14 +104,15 @@
     </ul>
   </div>
 </div>
-</header> -->
+</div>
+</header>
 
 <!-- main content section -->
 <main>
   <section class="menu section">
     <div class="menu__button-block container">
       <h2 hidden>Портфолио</h2>
-      <!-- <ul class="button-block__list">
+       <ul class="button-block__list">
         <li class="list-item">
           <button class="list-item__button button current-btn" type="button">Все</button>
         </li>
@@ -131,7 +134,7 @@
             Маркетинг
           </button>
         </li>
-      </ul> -->
+      </ul>
       <!-- img list -->
       <ul class="projects flex-container-wrap flex-container">
         <li class="projects__proj-list">
