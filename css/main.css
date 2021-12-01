@@ -512,6 +512,17 @@ h3 {
   }
 }
 
+@media (min-width: 1280px) {
+  .contacts {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    width: auto;
+  }
+}
+
 .a-tag-header {
   display: -webkit-box;
   display: -ms-flexbox;

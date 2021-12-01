@@ -85,6 +85,11 @@
       flex-wrap: wrap;
       width: min-content;
     }
+    @include mq(desktop) {
+      display: flex;
+      flex-wrap: nowrap;
+      width: auto;
+    }
   }
   
   .a-tag-header {
@@ -120,7 +125,7 @@
     text-decoration: none;
     color: var(--grey-color);
   }
-  
+
   .envelope,
   .smartphone,
   .tel,
