@@ -407,7 +407,6 @@ h3 {
 .header {
   min-height: 60px;
   border-bottom: 1px solid var(--border-color);
-  position: relative;
 }
 
 .header-flex-container {
@@ -426,7 +425,7 @@ h3 {
 .logo {
   font-family: var(--secondary-font), sans-serif;
   font-weight: bold;
-  font-size: 26px;
+  font-size: 24px;
   letter-spacing: 0.03em;
   color: var(--hover-color);
 }
@@ -440,6 +439,7 @@ h3 {
 @media (min-width: 1280px) {
   .logo {
     margin-right: 92px;
+    font-size: 26px;
   }
 }
 
@@ -452,15 +452,31 @@ h3 {
   color: var(--black-color);
 }
 
+.nav-header {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .nav-header {
+    display: block;
+  }
+}
+
 .studio,
 .portfolio,
 .contact {
   margin-right: 50px;
   font-weight: 500;
   font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
   letter-spacing: 0.02em;
   color: var(--black-color);
   position: relative;
+}
+
+.contact {
+  margin-right: 0px;
 }
 
 .current-page {
@@ -479,10 +495,21 @@ h3 {
 }
 
 .contacts {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   margin-left: auto;
+}
+
+@media (min-width: 768px) {
+  .contacts {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: -webkit-min-content;
+    width: -moz-min-content;
+    width: min-content;
+  }
 }
 
 .a-tag-header {
@@ -497,13 +524,39 @@ h3 {
 .header-tel,
 .header-email {
   font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
+  font-size: 12px;
+  line-height: 1.16;
   letter-spacing: 0.02em;
 }
 
+@media (min-width: 1280px) {
+  .header-tel,
+  .header-email {
+    font-size: 14px;
+    line-height: 1.14;
+  }
+}
+
 .header-email {
-  margin-right: 50px;
+  margin-bottom: 10px;
+}
+
+@media (min-width: 1280px) {
+  .header-email {
+    margin-right: 50px;
+  }
+}
+
+.header-email-link,
+.header-tel-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-decoration: none;
+  color: var(--grey-color);
 }
 
 .envelope,
@@ -516,18 +569,15 @@ h3 {
 
 .envelope,
 .smartphone {
-  margin-right: 10px;
+  margin-right: 8px;
   -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.display-none {
-  display: none;
-}
-
-@media (min-width: 768px) {
-  .display-none {
-    display: contents;
+@media (min-width: 1280px) {
+  .envelope,
+  .smartphone {
+    margin-right: 10px;
   }
 }
 
@@ -916,13 +966,24 @@ h3 {
   cursor: pointer;
 }
 
+.mob-header-menu {
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  .mob-header-menu {
+    display: none;
+  }
+}
+
 .header-menu {
   visibility: hidden;
-  background-color: grey;
+  background-color: white;
   position: fixed;
   width: 100%;
   height: 101%;
   top: 50%;
+  left: 0%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   padding: 48px 0 48px 40px;
@@ -936,10 +997,22 @@ h3 {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  opacity: 0;
+  -webkit-transition: opacity 200ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 200ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media (min-width: 768px) {
+  .header-menu {
+    display: none;
+  }
 }
 
 .is-open {
   visibility: visible;
+  opacity: 1;
+  -webkit-transition: opacity 200ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 200ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .menu-button {
@@ -948,11 +1021,17 @@ h3 {
   cursor: pointer;
   -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  z-index: 2;
+  z-index: 333;
   padding: 0;
   margin-right: 15px;
   height: 40px;
   width: 40px;
+}
+
+@media (min-width: 768px) {
+  .menu-button {
+    display: none;
+  }
 }
 
 .menu-button:hover {
@@ -1025,6 +1104,11 @@ h3 {
 
 .soc-link {
   position: relative;
+  color: var(--hover-color);
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.22;
+  letter-spacing: 0.02em;
 }
 
 .soc-link::after {
@@ -1033,17 +1117,6 @@ h3 {
   position: absolute;
   top: 0px;
   right: -10px;
-  height: 100%;
-  width: 1px;
-  background-color: var(--modal-field-border);
-}
-
-.soc-link:first-child::before {
-  display: block;
-  content: "";
-  position: absolute;
-  top: 0px;
-  left: -10px;
   height: 100%;
   width: 1px;
   background-color: var(--modal-field-border);
