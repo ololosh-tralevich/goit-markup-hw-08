@@ -87,6 +87,7 @@
     }
     @include mq(desktop) {
       display: flex;
+      align-items: center;
       flex-wrap: nowrap;
       width: auto;
     }
@@ -115,6 +116,7 @@
 
     @include mq(desktop) {
     margin-right: 50px;
+    margin-bottom: 0;
   }
   }
   

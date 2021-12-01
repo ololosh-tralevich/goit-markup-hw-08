@@ -240,16 +240,34 @@
         <h2 class="what-we-do">Чем мы занимаемся</h2>
         <ul class="flex-container">
           <li class="what-we-do-img">
-            <img class="img-tag" src="images/main/whatwedo/whatwedo.jpg" width="370" alt="Чем мы занимаемся" />
-            <p class="what-we-do-soaring">Десктопные приложения</p>
+            <img srcset="
+            ./images/main/whatwedo/whatwedo-1.jpg 1x,
+            ./images/main/whatwedo/whatwedo@2x-1.jpg 2x
+            "
+            src="./images/main/ourteam/whatwedo-1.jpg" 
+            alt="Логотип проекта" 
+            width="370px"/>
+          <p class="what-we-do-soaring">Десктопные приложения</p>
           </li>
           <li class="what-we-do-img">
-            <img class="img-tag" src="images/main/whatwedo/whatwedo(1).jpg" width="370" alt="Чем мы занимаемся" />
-            <p class="what-we-do-soaring">Мобильные приложения</p>
+            <img srcset="
+            ./images/main/whatwedo/whatwedo-2.jpg 1x,
+            ./images/main/whatwedo/whatwedo@2x-2.jpg 2x
+            "
+            src="./images/main/ourteam/whatwedo-2.jpg" 
+            alt="Логотип проекта" 
+            width="370px"/>         
+          <p class="what-we-do-soaring">Мобильные приложения</p>
           </li>
           <li class="what-we-do-img">
-            <img class="img-tag" src="images/main/whatwedo/whatwedo(2).jpg" width="370" alt="Чем мы занимаемся" />
-            <p class="what-we-do-soaring">Дизайнерские решения</p>
+            <img srcset="
+            ./images/main/whatwedo/whatwedo-3.jpg 1x,
+            ./images/main/whatwedo/whatwedo@2x-3.jpg 2x
+            "
+            src="./images/main/ourteam/whatwedo-3.jpg" 
+            alt="Логотип проекта" 
+            width="370px"/>          
+          <p class="what-we-do-soaring">Дизайнерские решения</p>
           </li>
         </ul>
       </div>
@@ -260,8 +278,28 @@
         <h2 class="our-team-caption">Наша команда</h2>
         <ul class="our-team-list">
           <li class="team-member-block">
-            <img class="img-tag team-member-photo" src="images/main/ourteam/ourteam.jpg"
-              alt="Наш Сотрудник" />
+            <picture>
+              <source
+              media="(min-width: 1280px)"
+              srcset="
+              ./images/main/ourteam/img_lg.jpg 1x,
+              ./images/main/ourteam/img@2x_lg.jpg 2x
+              ">
+              
+              <source 
+              media="(min-width: 768px)"
+              srcset="
+              ./images/main/ourteam/img_md.jpg 1x,
+              ./images/main/ourteam/img@2x_md.jpg 2x
+              ">
+
+              <img srcset="
+              ./images/main/ourteam/img_sm.jpg 1x,
+              ./images/main/ourteam/img@2x_sm.jpg 2x
+              "
+              src="./images/main/ourteam/img_sm.jpg" 
+              alt="Логотип проекта" />
+            </picture>
             <div class="team-member">
               <h3 class="team-member-name">Игорь Демьяненко</h3>
               <p class="team-member-profession">Product Designer</p>
@@ -300,8 +338,28 @@
           </li>
 
           <li class="team-member-block">
-            <img class="img-tag team-member-photo" src="images/main/ourteam/ourteam(2).jpg"
-              alt="Наш Сотрудник" />
+            <picture>
+              <source
+              media="(min-width: 1280px)"
+              srcset="
+              ./images/main/ourteam/img-1_lg.jpg 1x,
+              ./images/main/ourteam/img@2x-1_lg.jpg 2x
+              ">
+              
+              <source 
+              media="(min-width: 768px)"
+              srcset="
+              ./images/main/ourteam/img-1_md.jpg 1x,
+              ./images/main/ourteam/img@2x-1_md.jpg 2x
+              ">
+
+              <img srcset="
+              ./images/main/ourteam/img-1_sm.jpg 1x,
+              ./images/main/ourteam/img@2x-1_sm.jpg 2x
+              "
+              src="./images/main/ourteam/img-1_sm.jpg" 
+              alt="Логотип проекта" />
+            </picture>
             <div class="team-member">
               <h3 class="team-member-name">Ольга Репина</h3>
               <p class="team-member-profession">Frontend Developer</p>
@@ -340,8 +398,28 @@
           </li>
 
           <li class="team-member-block">
-            <img class="img-tag team-member-photo" src="images/main/ourteam/ourteam(3).jpg"
-              alt="Наш Сотрудник" />
+            <picture>
+              <source
+              media="(min-width: 1280px)"
+              srcset="
+              ./images/main/ourteam/img-2_lg.jpg 1x,
+              ./images/main/ourteam/img@2x-2_lg.jpg 2x
+              ">
+              
+              <source 
+              media="(min-width: 768px)"
+              srcset="
+              ./images/main/ourteam/img-2_md.jpg 1x,
+              ./images/main/ourteam/img@2x-2_md.jpg 2x
+              ">
+
+              <img srcset="
+              ./images/main/ourteam/img-2_sm.jpg 1x,
+              ./images/main/ourteam/img@2x-2_sm.jpg 2x
+              "
+              src="./images/main/ourteam/img-2_sm.jpg" 
+              alt="Логотип проекта" />
+            </picture>
             <div class="team-member">
               <h3 class="team-member-name">Николай Тарасов</h3>
               <p class="team-member-profession">Marketing</p>
@@ -380,8 +458,28 @@
           </li>
 
           <li class="team-member-block">
-            <img class="img-tag team-member-photo" src="images/main/ourteam/ourteam(4).jpg"
-              alt="Наш Сотрудник" />
+            <picture>
+              <source
+              media="(min-width: 1280px)"
+              srcset="
+              ./images/main/ourteam/img-3_lg.jpg 1x,
+              ./images/main/ourteam/img@2x-3_lg.jpg 2x
+              ">
+              
+              <source 
+              media="(min-width: 768px)"
+              srcset="
+              ./images/main/ourteam/img-3_md.jpg 1x,
+              ./images/main/ourteam/img@2x-3_md.jpg 2x
+              ">
+
+              <img srcset="
+              ./images/main/ourteam/img-3_sm.jpg 1x,
+              ./images/main/ourteam/img@2x-3_sm.jpg 2x
+              "
+              src="./images/main/ourteam/img-3_sm.jpg" 
+              alt="Логотип проекта" />
+            </picture>
             <div class="team-member">
               <h3 class="team-member-name">Михаил Ермаков</h3>
               <p class="team-member-profession">UI Designer</p>
