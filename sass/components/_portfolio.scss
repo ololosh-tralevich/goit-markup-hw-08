@@ -4,6 +4,7 @@
   margin-bottom: 40px;
 
   @include mq(tablet) {
+    justify-content: center;
     margin-bottom: 30px;
   }
   @include mq(desktop) {

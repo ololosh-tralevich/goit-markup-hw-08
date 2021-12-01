@@ -1412,6 +1412,9 @@ img {
 
 @media (min-width: 768px) {
   .button-block__list {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     margin-bottom: 30px;
   }
 }
